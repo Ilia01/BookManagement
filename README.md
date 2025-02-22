@@ -34,7 +34,7 @@ A RESTful API for managing books, built with ASP.NET Core 7.0.
   },
   "AllowedHosts": "*"
 }
-```json
+```
 
 Note: These files are git-ignored for security reasons. Make sure to replace `YOUR_SERVER` with your SQL Server instance name.
 
