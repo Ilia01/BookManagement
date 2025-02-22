@@ -1,0 +1,58 @@
+### Base URL
+@base_url = http://localhost:5215/api/
+
+### Get paginated book titles
+GET {{base_url}}/books?page=1&pageSize=10
+
+### Get book details by ID
+GET {{base_url}}/books/1
+
+### Create a new book
+POST {{base_url}}/books
+Content-Type: application/json
+
+{
+  "title": "New Book",
+  "author": "John Doe",
+  "publicationYear": 2024
+}
+
+### Create multiple books in bulk
+POST {{base_url}}/books/bulk
+Content-Type: application/json
+
+[
+  {
+    "title": "Book One",
+    "author": "Author A",
+    "publicationYear": 2023
+  },
+  {
+    "title": "Book Two",
+    "author": "Author B",
+    "publicationYear": 2022
+  }
+]
+
+### Update an existing book
+PUT {{base_url}}/books/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "title": "Book One",
+  "author": "John Doe",
+  "publicationYear": 2024
+}
+
+### Delete a book
+DELETE {{base_url}}/books/1
+
+### Delete multiple books in bulk
+DELETE {{base_url}}/books/bulk
+Content-Type: application/json
+
+[
+ 2, 3
+]
+
